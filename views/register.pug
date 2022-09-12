@@ -1,0 +1,9 @@
+extends layout
+
+block content 
+
+	form.forma(action="/register", method='POST')
+		input.input(name='loginField', type="text", placeholder='Login')
+		input.input(name='passField', type="password", placeholder='Password')
+		input.input(name="emailField", type="email", placeholder='Email')
+		button#sendbtn.btn.send-btn(type="submit") Register

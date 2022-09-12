@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	.container
+		h2.sec-head Contact us
+		form.forma(action="#")
+			input.input(type="text",placeholder='Имя',name='fname')
+			input.input(type="text",placeholder='Фамилия',name='lname')
+			input.input(type="email",placeholder='Введите E-mail',name="email")
+			select.select(name="reqtype")
+				option(value="Сотрудничество") Сотрудничество
+				option(value="Техническая информация") Техническая информация
+				option(value="Ошибка на сайте") Ошибка на сайте
+			p.sec-text Введите текст запроса:
+			textarea(name="reqtext", cols="45", rows="10") 
+			button#sendbtn.btn.send-btn(type="submit") Отправить
+			button#reqbtn.btn.send-btn(type="submit") Запросы
+		aside
+			h2.sec-head Your request status
+			p#statusfield.status
+				each line in lines ? lines : []
+					p.status #{JSON.stringify(line)}
+	script(type='text/javascript', src='/javascripts/formsend.js')

@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  .container
+    h2.sec-head Phasellus sit amet justo egestas
+    hr
+    p.sec-text Nunc ac lorem vel arcu ultricies volutpat at nec arcu. Ut tempus dignissim est, at iaculis massa blandit commodo. In vitae nunc eget arcu aliquam hendrerit a vel dui. Aliquam a sagittis neque, nec congue eros.
+    .wrapper
+      .elem 
+        h3 Ullamcorper
+      .elem.elem-one
+        h3 Elementum
+      .elem.elem-two
+        h3.blue-text Vitae nunc
+      .elem.elem-tre
+        h3 Sollicitudin
+      .elem.elem-four
+        h3 Vestibulum non
+      
+block contentt
+  .container
+    h2.sec-head Our clients love us
+    hr
+    p.sec-text Duis posuere sollicitudin felis, sit amet tempus orci iaculis eu. Donec quis laoreet dolor. Nam sed mi nisl. Duis ultricies lacus nec auctor rhoncus. Praesent quis tincidunt orci.
+    .imgwrap
+      each image in imgs
+        img(src='/images/'+image,class='logo-pic',alt='logo')
+
+block sender
+  .container
+    h2.sec-head Write to us
+    form.form(action="#")
+      input.input(type="email",placeholder="Enter E-mail",name="email")
+      button.btn.send-btn(type="submit") GO!
+
+
+

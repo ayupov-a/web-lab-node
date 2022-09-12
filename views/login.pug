@@ -1,0 +1,9 @@
+extends layout
+
+block content
+
+	form.forma(action="/login", method='POST')
+		input.input(name='loginField', type="text", placeholder='Login')
+		input.input(name='passField', type="password", placeholder='Password')
+		button#sendbtn.btn.send-btn(type="submit") Log in
+		button#sendbtn.btn.send-btn.regbtn(name='regBtn', value='true', type="submit") Register

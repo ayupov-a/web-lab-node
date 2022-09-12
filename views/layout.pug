@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title=title
+    link(rel='stylesheet',href='/stylesheets/style.css')
+  body
+    header#header.header
+      .container
+        .heading
+          h1.headname #{pname}
+          hr
+        .intro 
+          p.head-text &bull;&emsp;lorem ipsum&emsp;&bull;
+          h1.main-line creative interior design studio
+          p.head-text.second-line &bull;&emsp;libero leo, interdum sed vehicula id&emsp;&bull;
+          input(type='submit',class='btn',value="check out our work")
+    
+    section#nav.nav
+      .container
+        ul.menu
+          each item in navigation = [{name: 'HOME', addr: 'http://127.0.0.1:3000', cl: '#', licl: '#'},{name: 'SERVICES', addr: '#', cl: '#', licl: '#'},{name: 'PORTFOLIO', addr: '#', cl: '#', licl: '#'},{name: 'WDS', addr: '#', cl: 'logo-text', licl: 'logo'},{name: 'OUR TEAM', addr: '#', cl: '#', licl: '#'},{name: 'OUR BLOG', addr: '#', cl: '#', licl: '#'},{name: 'CONTACT', addr: '/contact', cl: '#', licl: '#'}]
+            li(class=item.licl)
+              a(href=item.addr, class=item.cl) #{item.name}
+    hr
+        
+    section#section.section
+      block content
+    section#section-two.section-two 
+      block contentt
+    section#sender.sender
+      block sender
+    
+    footer#footer.footer
+      .container
+        .foot-elem-logos
+          each foot in footmenu=["Twitter.png", "Facebook.png", "Google.png", "Pinterest.png", "RSS.png"]
+            a(href='#',class='logo-pic')
+            img(src='/images/'+foot,alt='foots')
+        p.foot-elem.foot-text © 2014 WebDesign Studio. All rights reserved.<br>and developed by pcklab.com
+  script(type="text/javascript" src="/javascripts/jquery-3.6.0.min.js")
+  script(type='text/javascript', src='/javascripts/scroll.js')
